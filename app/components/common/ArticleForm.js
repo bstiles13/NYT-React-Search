@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 
-class QuoteForm extends Component {
+class ArticleForm extends Component {
   constructor() {
     super();
     this.state = {
@@ -26,9 +26,9 @@ class QuoteForm extends Component {
   }
   handleButtonClick(event) {
     event.preventDefault();
-    const newQuote = this.state;
-    console.log(newQuote);
-    API.saveQuote(newQuote).then(this.props.getQuotes);
+    const newArticle = this.state;
+    console.log(newArticle);
+    API.saveArticle(newArticle).then(this.props.getArticle);
     this.setState({
         termValue: '',
         startValeu: '',
@@ -106,4 +106,4 @@ class QuoteForm extends Component {
   }
 }
 
-export default QuoteForm;
+export default ArticleForm;

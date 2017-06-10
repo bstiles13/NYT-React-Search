@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 app.use("/", routes);
 
-var db = process.env.MONGODB_URI || "mongodb://localhost/quotesApp";
+var db = process.env.MONGODB_URI || "mongodb://localhost/nytreact";
 
 // Connect mongoose to our database
 mongoose.connect(db, function(error) {

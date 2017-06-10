@@ -6,27 +6,27 @@ class Favorites extends Component {
   constructor() {
     super();
     this.state = {
-      quotes: []
+      articles: []
     };
 
-    this.getQuotes = this.getQuotes.bind(this);
+    this.getArticles = this.getArticles.bind(this);
   }
   componentDidMount() {
-    this.getQuotes();
+    this.getArticles();
   }
-  getQuotes() {
-    API.getQuotes().then((res) => {
-      const favoriteQuotes = res.data.filter(quote => quote.favorited);
-      this.setState({ quotes: favoriteQuotes });
+  getArticles() {
+    API.getArticles().then((res) => {
+      const favoriteArticles = res.data.filter(article => article.favorited);
+      this.setState({ articles: favoriteArticles });
     });
   }
 
-  renderQuotes() {
-    return this.state.quotes.map(quote => (
+  renderArticles() {
+    return this.state.articles.map(article => (
       <Panel
-        quote={quote}
-        key={quote._id}
-        getQuotes={this.getQuotes}
+        article={article}
+        key={article._id}
+        getArticles={this.getArticles}
       />
     ));
   }
@@ -34,12 +34,12 @@ class Favorites extends Component {
     return (
       <div>
         <div className="jumbotron text-center">
-          <h1>Your Favorite Quotes</h1>
-          <p>Your very best quotes.</p>
+          <h1>Your Favorite Articles</h1>
+          <p>Your very best articles.</p>
         </div>
         <div className="container">
         <div className="row">
-          {this.renderQuotes()}
+          {this.renderArticles()}
         </div>
         </div>
       </div>

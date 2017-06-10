@@ -1,32 +1,32 @@
 import React, { Component } from "react";
 import Panel from "./common/Panel";
-import QuoteForm from "./common/QuoteForm";
+import ArticleForm from "./common/ArticleForm";
 import API from "../utils/API";
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
-      quotes: []
+      articles: []
     };
 
-    this.getQuotes = this.getQuotes.bind(this);
+    this.getArticles = this.getArticles.bind(this);
   }
 
   componentDidMount() {
-    this.getQuotes();
+    this.getArticles();
   }
-  getQuotes() {
-    API.getQuotes().then((res) => {
-      this.setState({ quotes: res.data });
+  getArticles() {
+    API.getArticles().then((res) => {
+      this.setState({ articles: res.data });
     });
   }
-  renderQuotes() {
-    return this.state.quotes.map(quote => (
+  renderArticles() {
+    return this.state.articles.map(article => (
       <Panel
-        quote={quote}
-        key={quote._id}
-        getQuotes={this.getQuotes}
+        article={article}
+        key={article._id}
+        getArticles={this.getArticles}
       />
     ));
   }
@@ -34,8 +34,8 @@ class Home extends Component {
     return (
       <div className="container">
         <div className="row">
-          <QuoteForm
-            getQuotes={this.getQuotes}
+          <ArticleForm
+            getArticles={this.getArticles}
           />
         </div>
         <div className="panel panel-success">
@@ -43,7 +43,7 @@ class Home extends Component {
             <h3 className="panel-title"><strong><i className="fa fa-list-alt"></i>   Results</strong></h3>
           </div>
           <div className="panel-body">
-          {this.renderQuotes()}
+          {this.renderArticles()}
           </div>
         </div>
       </div>

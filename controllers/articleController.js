@@ -1,7 +1,7 @@
-var Quote = require("../models/quote");
+var Article = require("../models/article");
 
 module.exports = {
-  // This method handles retrieving quotes from the db
+  // This method handles retrieving Articles from the db
   index: function(req, res) {
     var query;
     if (req.query) {
@@ -10,26 +10,26 @@ module.exports = {
     else {
       query = req.params.id ? { _id: req.params.id } : {};
     }
-    Quote.find(query)
+    Article.find(query)
       .then(function(doc) {
         res.json(doc);
       }).catch(function(err) {
         res.json(err);
       });
   },
-  // This method handles creating new quotes
+  // This method handles creating new Articles
   create: function(req, res) {
     var results = req.body.response.data.response.docs;
     // console.log(results);
     for (var i = 0; i < results.length; i++) {
       console.log(results[i].headline.main);
-      Quote.create({text: results[i].headline.main});
+      Article.create({headline: results[i].headline.main});
     }
     res.send('complete');
   },
-  // This method handles updating quotes
+  // This method handles updating Articles
   update: function(req, res) {
-    Quote.update({
+    Article.update({
       _id: req.params.id
     },
       req.body
@@ -39,9 +39,9 @@ module.exports = {
       res.json(err);
     });
   },
-  // This method handles deleting quotes
+  // This method handles deleting Articles
   destroy: function(req, res) {
-    Quote.remove({
+    Article.remove({
       _id: req.params.id
     }).then(function(doc) {
       res.json(doc);

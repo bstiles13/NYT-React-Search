@@ -2,11 +2,11 @@ import axios from "axios";
 
 const API = {
 
-  getQuotes: function() {
-    return axios.get("/api/quotes");
+  getArticles: function() {
+    return axios.get("/api/articles");
   },
 
-  saveQuote: function(search) {
+  saveArticle: function(search) {
 
     var authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
 
@@ -31,19 +31,19 @@ const API = {
 
       console.log(response);
 
-      return axios.post("/api/quotes", { response });
+      return axios.post("/api/articles", { response });
     });
     
   },
 
-  deleteQuote: function(id) {
-    return axios.delete(`/api/quotes/${id}`);
+  deleteArticle: function(id) {
+    return axios.delete(`/api/articles/${id}`);
   },
 
-  favoriteQuote: function(quote) {
-    quote.favorited = !quote.favorited;
-    const { _id, favorited } = quote;
-    return axios.patch(`/api/quotes/${_id}`, { favorited });
+  favoriteArticle: function(article) {
+    article.favorited = !article.favorited;
+    const { _id, favorited } = article;
+    return axios.patch(`/api/articles/${_id}`, { favorited });
   }
 };
 
