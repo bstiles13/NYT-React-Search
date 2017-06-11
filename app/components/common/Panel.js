@@ -17,13 +17,13 @@ class Panel extends Component {
             <i
               onClick={() => this.favoriteArticle(this.props.article)}
               style={styles.favoriteStyle}
-              className={this.props.article.favorited ? "fa fa-star gold" : "fa fa-star-o"}
+              className={this.props.article.favorited ? "fa fa-star gold" : "fa fa-star"}
               aria-hidden="true"
             />
             <i
               onClick={() => this.deleteArticle(this.props.article._id)}
               style={styles.deleteStyle}
-              className="fa fa-trash-o"
+              className="fa fa-trash"
               aria-hidden="true"
             />
             {this.props.article.headline}
@@ -37,13 +37,15 @@ const styles = {
   favoriteStyle: {
     cursor: "pointer",
     marginRight: 10,
-    float: "left"
+    float: "left",
+    fontSize: 15
   },
   deleteStyle: {
     cursor: "pointer",
     marginLeft: 5,
-    color: "red",
-    float: "right"
+    color: "orange",
+    float: "right",
+    fontSize: 15
   }
 };
 

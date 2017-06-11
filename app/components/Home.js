@@ -41,7 +41,7 @@ class Home extends Component {
         </div>
         <div className="panel panel-success">
           <div className="panel-heading">
-            <h3 className="panel-title"><strong><i className="fa fa-list-alt"></i>   Results</strong></h3>
+            <h3 className="panel-title"><strong><i className="fa fa-list"></i>   Results</strong></h3>
           </div>
           <div className="panel-body">
           {this.renderArticles()}
