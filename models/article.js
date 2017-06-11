@@ -3,7 +3,12 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var articleSchema = new Schema({
-  headline: String,
+  headline: {
+    type: String,
+    index: {
+            unique: true
+        }
+  },
   favorited: {
     type: Boolean,
     default: false
