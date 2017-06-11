@@ -11,6 +11,7 @@ class Home extends Component {
     };
 
     this.getArticles = this.getArticles.bind(this);
+    this.renderArticles = this.renderArticles.bind(this);
   }
 
   componentDidMount() {

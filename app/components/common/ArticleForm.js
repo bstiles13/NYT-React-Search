@@ -27,8 +27,9 @@ class ArticleForm extends Component {
   handleButtonClick(event) {
     event.preventDefault();
     const newArticle = this.state;
+    console.log('test');
     console.log(newArticle);
-    API.saveArticle(newArticle).then(this.props.getArticle);
+    API.saveArticle(newArticle).then(this.props.getArticles);
     this.setState({
         termValue: '',
         startValeu: '',
