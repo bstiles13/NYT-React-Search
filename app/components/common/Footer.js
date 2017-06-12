@@ -3,9 +3,8 @@ import React from "react";
 const Footer = () => (
   <footer className="footer">
     <hr />
-    <p className="pull-right">
-      <i className="fa fa-github" aria-hidden="true" />
-        &nbsp;&nbsp; Proudly built using React.js
+    <p style={{textAlign: 'center'}}>
+        All the news, all the time
     </p>
   </footer>
 );

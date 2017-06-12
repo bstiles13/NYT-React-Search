@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router";
 
 const Navbar = () => (
-  <nav style={{ marginBottom: 50 }} className="navbar navbar-default">
+  <nav style={{ marginBottom: 50 , backgroundColor: 'GhostWhite'}} className="navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
-        <Link className="navbar-brand" to="/">New York Times - React App </Link>
+        <Link className="navbar-brand" style={{fontFamily: 'Mogra'}}to="/">NYT React App </Link>
       </div>
-      <ul className="nav navbar-nav">
+      <ul className="nav navbar-nav pull-right">
         <li className={location.pathname === "/"}>
           <Link to="/">Home</Link>
         </li>
