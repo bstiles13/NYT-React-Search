@@ -7,7 +7,7 @@ const Navbar = () => (
       <div className="navbar-header">
         <Link className="navbar-brand" style={{fontFamily: 'Mogra'}}to="/">NYT React App </Link>
       </div>
-      <ul className="nav navbar-nav pull-right">
+      <ul className="nav navbar-nav pull-left">
         <li className={location.pathname === "/"}>
           <Link to="/">Home</Link>
         </li>
