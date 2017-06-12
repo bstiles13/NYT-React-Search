@@ -8,10 +8,10 @@ const Navbar = () => (
         <Link className="navbar-brand" to="/">New York Times - React App </Link>
       </div>
       <ul className="nav navbar-nav">
-        <li className={location.pathname === "/" && "active"}>
+        <li className={location.pathname === "/"}>
           <Link to="/">Home</Link>
         </li>
-        <li className={location.pathname === "/favorites" && "active"}>
+        <li className={location.pathname === "/favorites"}>
           <Link to="/favorites">Favorites</Link>
         </li>
       </ul>
