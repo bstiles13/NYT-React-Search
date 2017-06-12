@@ -72,7 +72,7 @@ class ArticleForm extends Component {
                   resize: "none"
                 }}
                 onChange={this.handleStartChange}
-                placeholder="Start Year"
+                placeholder="YYYYMMDD"
               />
               </div>
 
@@ -86,7 +86,7 @@ class ArticleForm extends Component {
                   resize: "none"
                 }}
                 onChange={this.handleEndChange}
-                placeholder="End Year"
+                placeholder="YYYYMMDD"
               />
               </div>
 

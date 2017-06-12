@@ -11,18 +11,18 @@ const API = {
     var authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
 
     var searchTerm = search.termValue;
-    var startYear = search.startValue;
-    var endYear = search.endValue;
+    var startDate = search.startValue;
+    var endDate = search.endValue;
 
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" +
       authKey + "&q=" + searchTerm;
 
-    if (parseInt(startYear)) {
-      url = url + "&begin_date=" + startYear + "0101";
+    if (parseInt(startDate)) {
+      url = url + "&begin_date=" + startDate;
     }
 
-    if (parseInt(endYear)) {
-      url = url + "&end_date=" + endYear + "0101";
+    if (parseInt(endDate)) {
+      url = url + "&end_date=" + endDate;
     }
 
     // console.log(url);
