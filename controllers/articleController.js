@@ -21,11 +21,13 @@ module.exports = {
   create: function(req, res) {
     var results = req.body.response.data.response.docs;
     // console.log(results);
+    Article.remove({favorited: false}, function(err, result) {
     for (var i = 0; i < results.length; i++) {
       console.log(results[i].headline.main);
       Article.create({headline: results[i].headline.main});
     }
     res.send('complete');
+    })
   },
   // This method handles updating Articles
   update: function(req, res) {

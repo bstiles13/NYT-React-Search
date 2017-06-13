@@ -19,7 +19,10 @@ class Home extends Component {
   }
   getArticles() {
     API.getArticles().then((res) => {
-      this.setState({ articles: res.data });
+      const favoriteArticles = res.data.filter(article => {
+        return article.favorited === false;
+      });
+      this.setState({ articles: favoriteArticles });
     });
   }
   renderArticles() {
