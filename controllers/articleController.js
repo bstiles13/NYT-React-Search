@@ -24,7 +24,8 @@ module.exports = {
     Article.remove({favorited: false}, function(err, result) {
     for (var i = 0; i < results.length; i++) {
       console.log(results[i].headline.main);
-      Article.create({headline: results[i].headline.main});
+      console.log(results[i].web_url);
+      Article.create({headline: results[i].headline.main, url: results[i].web_url});
     }
     res.send('complete');
     })

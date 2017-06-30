@@ -9,6 +9,12 @@ var articleSchema = new Schema({
             unique: true
         }
   },
+  url: {
+    type: String,
+    index: {
+            unique: true
+        }
+  },
   favorited: {
     type: Boolean,
     default: false

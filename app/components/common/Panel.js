@@ -26,7 +26,7 @@ class Panel extends Component {
               className="fa fa-trash"
               aria-hidden="true"
             />
-            {this.props.article.headline}
+            <a href={this.props.article.url} target='_blank'>{this.props.article.headline}</a>
           </div>
         </div>
     );
