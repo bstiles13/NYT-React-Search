@@ -17,7 +17,7 @@ SPA app that utilizes the React mounting lifecycle to query and display articles
 
    * `title` (Title of the stored article from nytimes.com)
    
-   * `url` (Click the article Title to open a new tab at the New York Times url with the full article)
+   * `url` (Click the article Title to view the New York Times url and full article in a new tab)
 
    * `favorite` (Click the star icon on the left side of a search result to add the article to your user favorites and remove it from the queue)
    
