@@ -24,13 +24,13 @@ SPA app that utilizes the React mounting lifecycle to query and display articles
    * `delete` (Click the trashcan icon on the right side of a search result to delete the article from the results list)
 
 
-4. Layout
+4. React Layout
      ```
      * **Main** - contains the main-container div that holds the main layout and navigation.
 
-     * **Search** - queries the NYT API for articles. Displays API search results from another possible **Query** component and **Results** component. Gives the user the ability to save an article to their Saved Articles.
+     * **Search** - queries the NYT API for articles.
 
-     * **Saved** - displays the Saved Articles that were searched and stored in the database
+     * **Results** - displays the Saved Articles that were searched and stored in the database. Gives the user the ability to save an article to their Saved Articles or delete an article from the results/database.
      
      * **Favorites** - displays the Favorited Articles that were "starred" in any previous searches
      ```
