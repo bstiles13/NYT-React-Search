@@ -11,7 +11,7 @@ SPA app that utilizes the React mounting lifecycle to query and display articles
   
   * `End Date` (optional)
   
-2. Click <b>Search</b> to display new results. New results will replace any articles in the database (and on the webpage) that were not favorited from a previous search.  
+2. Click <b>Search</b> to display new results. New results will replace any articles in the database (and on the webpage) that are not favorited or "starred".  
 
 2. Your <b>Search Results</b> will have the following:
 
